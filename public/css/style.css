@@ -1,56 +1,89 @@
 body {
-    background-color:#242933;
+  background-color: #ffffff;
 }
+
 h1 {
-    color: #f6f0e9;
-    font-size: 50px;
-    font-family: 'Roboto Mono';
+  color: #535353;
+  font-size: 200px;
+  font-family: 'Roboto Mono';
 }
+
 h2 {
-    font-size: 30px;
-    font-family: 'Roboto Mono';
+  color: #535353;
+  font-size: 50px;
+  font-family: 'Roboto Mono';
 }
-h3 {
-    color: #f6f0e9;
-    font-size: 20px;
-    font-family: 'Roboto Mono';
-}
+
 p {
-    color: #8e8a87;
-    font-size: 15px;
-    font-family: 'Roboto Mono';
+  font-family: 'Roboto Mono';
+  margin-left: 70px;
+  margin-right: 70px;
 }
-.w3-card {
-    background-color: #242933;
-    display: inline-block;
-    padding: 10px;
+
+.fa {
+  padding: 20px;
+  font-size: 60px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
-.w3-row{
-    padding: 20px;
+
+.fa:hover {
+  opacity: 0.7;
 }
-.float-right {
-    padding-right: 10%;
-    float: right;
-    width: 50%;
+
+.fa-linkedin {
+  background: #ec7070;
+  color: white;
 }
-.red {
-    color: #ec4c56;
+
+.fa-instagram {
+  background: #ec7070;
+  color: white;
 }
-.dark {
-    background-color: #1c222d;
+
+.fa-github {
+  background: #ec7070;
+  color: white;
 }
-.sidecard {
-    background-color: #1c222d;
-    border-radius: 20px;
+
+.fa-envelope {
+  background: #ec7070;
+  color: white;
 }
-.shadow {
-    box-shadow: 0 0px 20px rgb(67, 67, 67)
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 0;
 }
-.top {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    width: 50%;
-    text-align: center; 
-    border-radius: 20px;
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-container {
+  text-align: center;
+  width: 50%;
+}
+
+.image-container {
+  text-align: center;
+  width: 50%;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+img {
+  align-items: center;
+  margin: 10px;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }

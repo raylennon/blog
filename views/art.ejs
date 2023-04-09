@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Ray Lennon</title>
+    <br>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/art.css">
+</head>
+
+<body>
+    <h1 class="title">ART</h1>
+    <% images.forEach(image=> { %>
+        <div class="image-container" onclick="openModal('/images/<%= image %>')">
+            <img src="/images/<%= image %>" alt="<%= image %>">
+        </div>
+        <% }); %>
+            <div class="modal" onclick="closeModal()">
+                <img class="modal-content modal-image" src="" alt="">
+            </div>
+            <script>
+                function openModal(src) {
+                    var modal = document.querySelector('.modal');
+                    var modalContent = modal.querySelector('.modal-content');
+                    var modalImage = modal.querySelector('.modal-image');
+                    modalImage.onload = function () {
+                        var width = modalImage.naturalWidth;
+                        var height = modalImage.naturalHeight;
+                        var maxWidth = window.innerWidth * 0.9;
+                        var maxHeight = window.innerHeight * 0.9;
+                        var aspectRatio = width / height;
+                        modalImage.style.maxHeight = maxHeight + 'px';
+                        modalImage.style.maxWidth = Math.round(maxHeight * aspectRatio) + 'px';
+
+                    };
+                    modalContent.src = src;
+                    modal.classList.add('active');
+                }
+                function closeModal() {
+                    var modal = document.querySelector('.modal');
+                    modal.classList.remove('active');
+                }
+            </script>
+</body>
+
+</html>
