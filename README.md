@@ -1,8 +1,7 @@
 # Personal Site
 ## Core Ideas
 - Developed with Node.js
-- Dynamic
-- Hosted on AWS
-## Hoping to accomplish
-- Interactive demonstrations of Python toys, etc.
-- Sexy
+- Dynamic w/ EJS pages & post filing system
+- Hosted on AWS w/ Elastic Beanstalk, auto repo updates, s3 storage
+
+http://www.ray.red
