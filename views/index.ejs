@@ -12,7 +12,7 @@
 
 <body>
     <div class="social-icons" style="text-align: center;">
-        <canvas id="myCanvas" style="margin: 0 auto"></canvas>
+        <canvas id="myCanvas" style="margin: 0 auto; width: 50%; padding-bottom: 30px;"></canvas>
     </div>
     <div class="social-icons" style="text-align: center;">
         <a href="https://www.linkedin.com/in/ray-lennon/?_l=en_US" class="fa fa-linkedin"></a>
@@ -32,9 +32,8 @@
         <div class="post-container <%= (i % 2 == 0) ? 'reverse' : '' %>">
             <div class="text-container">
                 <h2>
-                    <%= post.id %>
+                    <%=post.id.slice(2)%>
                 </h2>
-                <p>
                 <p><%- decodeURIComponent(encodeURIComponent(posts[i].description)) %></p>
                 </p>
             </div>

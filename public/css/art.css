@@ -70,3 +70,18 @@ img {
   max-width: 90%;
   max-height: 90%;
 }
+
+.home-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.home-button a {
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 18px;
+}

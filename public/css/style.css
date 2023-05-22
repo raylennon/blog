@@ -1,5 +1,11 @@
 body {
+  margin: 0;
+  padding: 0;
   background-color: #ffffff;
+  background-image: url("/images/TwoDesks.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -12,6 +18,7 @@ h2 {
   color: #535353;
   font-size: 50px;
   font-family: 'Roboto Mono';
+  /* margin-top: 0 */
 }
 
 p {
@@ -58,6 +65,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 30px 0;
+  /* width: 80%; */
 }
 
 .reverse {
@@ -67,6 +75,8 @@ p {
 .text-container {
   text-align: center;
   width: 50%;
+  /* display: block; */
+  white-space: pre-line;
 }
 
 .image-container {

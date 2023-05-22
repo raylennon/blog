@@ -1,6 +1,5 @@
 const express = require('express')
 const ejs = require('ejs');
-
 const fs = require('fs');
 
 const app = express()
@@ -37,7 +36,7 @@ app.get('/posts/:postId/description', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  fs.readdir(postsDir,(err, files) => {
+  fs.readdir(postsDir, (err, files) => {
     if (err) {
       console.error(err);
       res.status(500).send('Internal server error');

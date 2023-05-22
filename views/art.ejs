@@ -4,11 +4,16 @@
     <title>Ray Lennon</title>
     <br>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/art.css">
 </head>
 
 <body>
+    <div style="position: fixed; top: 10px; left: 10px;">
+        <a href="/"
+            style="text-decoration: none; color: white; background-color: #333; padding: 8px 16px; border-radius: 4px;">Home</a>
+    </div>
     <h1 class="title">ART</h1>
     <% images.forEach(image=> { %>
         <div class="image-container" onclick="openModal('/images/<%= image %>')">
