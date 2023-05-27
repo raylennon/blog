@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
 app.get('/art', (req, res) => {
   // get list of all image files in public/images folder
   const fs = require('fs');
-  const dirPath = path.join(__dirname, 'public', 'images');
+  const dirPath = path.join(__dirname, 'public', 'images/Art');
   fs.readdir(dirPath, (err, files) => {
     if (err) {
       console.log('Error getting images: ', err);
