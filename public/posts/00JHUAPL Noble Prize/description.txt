@@ -1,0 +1,5 @@
+I'm honored to have been awarded the annual Noble Prize for my contributions at the Johns Hopkins University Applied Physics Laboratory!
+
+In particular, the award recognizes my team's work on the project MAINER (Manipulating Atmospheric Ice Nucleation Events, Redux), which targets the development of novel bio-derived cloud seeding applications. My role on the project involved performing data aggregation and analysis from satellite imagery, to uncover global patterns in high-atmospheric cloud formation. 
+
+The full JHUAPL annual achievement awards announcement can be read <a href="https://www.jhuapl.edu/news/news-releases/230516a-apl-celebrates-top-inventions-technical-accomplishments-at-2023-achievement-awards">here</a>. 
