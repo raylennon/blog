@@ -2,7 +2,6 @@
 
 <head>
     <title>Ray Lennon</title>
-    <br>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap"
         rel="stylesheet">
@@ -10,42 +9,57 @@
 </head>
 
 <body>
-    <div style="position: fixed; top: 10px; left: 10px;">
-        <a href="/"
-            style="text-decoration: none; color: white; background-color: #ec7070; padding: 8px 16px; border-radius: 4px;">Home</a>
+    <div class = "home-button" style="position: fixed; top: 10px; left: 10px;">
+        <a href="/">Home</a>
     </div>
-    <h1 class="title">ART</h1>
-    <% images.forEach(image=> { %>
-        <div class="image-container" onclick="openModal('/images/Art/<%= image %>')">
-            <img src="/images/Art/<%= image %>" alt="<%= image %>">
-        </div>
-        <% }); %>
-            <div class="modal" onclick="closeModal()">
-                <img class="modal-content modal-image" src="" alt="">
-            </div>
-            <script>
-                function openModal(src) {
-                    var modal = document.querySelector('.modal');
-                    var modalContent = modal.querySelector('.modal-content');
-                    var modalImage = modal.querySelector('.modal-image');
-                    modalImage.onload = function () {
-                        var width = modalImage.naturalWidth;
-                        var height = modalImage.naturalHeight;
-                        var maxWidth = window.innerWidth * 0.9;
-                        var maxHeight = window.innerHeight * 0.9;
-                        var aspectRatio = width / height;
-                        modalImage.style.maxHeight = maxHeight + 'px';
-                        modalImage.style.maxWidth = Math.round(maxHeight * aspectRatio) + 'px';
+    <div style="text-align: center; ">
+        <canvas id="myCanvas" style="position: absolute; top: 0; margin: 0 auto; width: 50%; left: 35%;"></canvas>
+    </div>
+    <!-- <div style="text-align: center;">
+        <canvas id="myCanvas" style="width: 50%; padding-bottom: 30px;"></canvas>
+    </div> -->
 
-                    };
-                    modalContent.src = src;
-                    modal.classList.add('active');
-                }
-                function closeModal() {
-                    var modal = document.querySelector('.modal');
-                    modal.classList.remove('active');
-                }
-            </script>
+    <div style="position: absolute; top: 300px; width:100%; display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
+        <% images.forEach(image=> { %>
+            <div class="image-container" onclick="openModal('/images/Art/<%= image %>')">
+                <img src="/images/Art/<%= image %>" alt="<%= image %>">
+            </div>
+            <% }); %>
+    </div>
+
+    <div class="modal" onclick="closeModal()">
+        <img class="modal-content modal-image" src="" alt="">
+    </div>
+    <script>
+        function openModal(src) {
+            var modal = document.querySelector('.modal');
+            var modalContent = modal.querySelector('.modal-content');
+            var modalImage = modal.querySelector('.modal-image');
+            modalImage.onload = function () {
+                var width = modalImage.naturalWidth;
+                var height = modalImage.naturalHeight;
+                var maxWidth = window.innerWidth * 0.9;
+                var maxHeight = window.innerHeight * 0.9;
+                var aspectRatio = width / height;
+                modalImage.style.maxHeight = maxHeight + 'px';
+                modalImage.style.maxWidth = Math.round(maxHeight * aspectRatio) + 'px';
+
+            };
+            modalContent.src = src;
+            modal.classList.add('active');
+        }
+        function closeModal() {
+            var modal = document.querySelector('.modal');
+            modal.classList.remove('active');
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three.meshline@1.4.0/src/THREE.MeshLine.min.js"></script>
+    <script type="module" src="js/artsquiggle.js">
+    </script>
 </body>
 
 </html>

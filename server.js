@@ -53,6 +53,7 @@ app.get('/', (req, res) => {
         id: postDir,
         images,
         description: fs.readFileSync(path.join(postPath, 'description.txt'), 'utf8'),
+        datebox: fs.readFileSync(path.join(postPath, 'datebox.txt'), 'utf8')
       };
     });
 
@@ -75,5 +76,78 @@ app.get('/art', (req, res) => {
       res.render('art', { images: imageFiles });
     }
   });
+});
+
+app.get('/projects', (req, res) => {
+  fs.readdir(postsDir, (err, files) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Internal server error');
+      return;
+    }
+
+    const postDirs = files.filter(file => {
+      const postDirPath = path.join(postsDir, file);
+      const isDirectory = fs.statSync(postDirPath).isDirectory();
+      const hasCategoriesFile = fs.existsSync(path.join(postDirPath, 'categories.txt'));
+      const categoriesContent = hasCategoriesFile ? fs.readFileSync(path.join(postDirPath, 'categories.txt'), 'utf8') : '';
+
+      return isDirectory && hasCategoriesFile && categoriesContent.includes('projects');
+    });
+
+    const posts = postDirs.map(postDir => {
+      const postPath = path.join(postsDir, postDir);
+      const images = fs.readdirSync(postPath).filter(file => /\.(png|jpe?g|gif)$/i.test(file));
+
+      return {
+        id: postDir,
+        images,
+        description: fs.readFileSync(path.join(postPath, 'description.txt'), 'utf8'),
+        datebox: fs.readFileSync(path.join(postPath, 'datebox.txt'), 'utf8')
+      };
+    });
+
+    res.render('projects.ejs', { posts: posts, ejs: ejs });
+  });
+});
+
+app.get('/community', (req, res) => {
+  fs.readdir(postsDir, (err, files) => {
+    if (err) {
+      console.error(err);
+      res.status(500).send('Internal server error');
+      return;
+    }
+
+    const postDirs = files.filter(file => {
+      const postDirPath = path.join(postsDir, file);
+      const isDirectory = fs.statSync(postDirPath).isDirectory();
+      const hasCategoriesFile = fs.existsSync(path.join(postDirPath, 'categories.txt'));
+      const categoriesContent = hasCategoriesFile ? fs.readFileSync(path.join(postDirPath, 'categories.txt'), 'utf8') : '';
+
+      return isDirectory && hasCategoriesFile && categoriesContent.includes('community');
+    });
+
+    const posts = postDirs.map(postDir => {
+      const postPath = path.join(postsDir, postDir);
+      const images = fs.readdirSync(postPath).filter(file => /\.(png|jpe?g|gif)$/i.test(file));
+
+      return {
+        id: postDir,
+        images,
+        description: fs.readFileSync(path.join(postPath, 'description.txt'), 'utf8'),
+        datebox: fs.readFileSync(path.join(postPath, 'datebox.txt'), 'utf8')
+      };
+    });
+
+    res.render('community.ejs', { posts, ejs });
+  });
+});
+
+
+
+// The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function (req, res) {
+  res.status(404).send("This page doesn't exist yet - keep looking. Here's a cookie for your trouble: 🍪\n\n-Ray");
 });
 app.listen(port, () => console.log(`Server live on port ${port}!`))

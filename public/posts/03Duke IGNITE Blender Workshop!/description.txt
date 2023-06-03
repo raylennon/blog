@@ -1,3 +1,0 @@
-I was super excited to host a Blender 3D modelling workshop this past weekend! I taught a group of fellow Duke students the capabilities of Blender, my favorite piece of open-source 3D software, as it pertains to creating low-poly models for game development and animation. We went over the fundamentals of geometry-based modelling, topology, sculpting, and material assignment. 
-
-To see what we made, check out the end-result .blend file <a href="https://drive.google.com/file/d/1RsTBv4-lSXCqYS7n8RCB3lEKFfjezM8A/view?usp=sharing">here</a>, or watch the full workshop recording <a href="https://drive.google.com/drive/folders/1ELNwcss75n6ML1SvtIsVHE4Sq7KnyCT1?usp=sharing">here</a>.
