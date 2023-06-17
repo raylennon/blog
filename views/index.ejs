@@ -14,9 +14,9 @@
 
 <body>
     <div style="text-align: center;">
-        <canvas id="myCanvas" style="margin: 0 auto; width: 50%; padding-bottom: 30px;"></canvas>
+        <canvas id="myCanvas" style="margin: 0 auto; width: 50%; padding-top: 15px; padding-bottom: 10px;"></canvas>
     </div>
-    <div class="social-icons" style="text-align: center;">
+    <div class="social-icons" style="text-align: center; margin-bottom: 40px">
         <a href="https://www.linkedin.com/in/ray-lennon/?_l=en_US" class="fa fa-linkedin"></a>
         <a href="https://www.instagram.com/raymond__of__sunshine" class="fa fa-instagram"></a>
         <a href="https://github.com/raylennon" class="fa fa-github"></a>
@@ -24,8 +24,8 @@
     </div>
     <div style="text-align:center; padding-bottom: 15px">
         <h2 style="margin-top: 25px;">
-            <a href="/art" style="color: #535353;">Art</a>
-            · <a href="/projects" style="color: #535353;">Projects</a>
+            <a href="/projects" style="color: #535353;">Projects</a>
+            · <a href="/art" style="color: #535353;">Art</a>
             · <a href="/community" style="color: #535353;">Community</a>
         </h2>
     </div>
@@ -52,6 +52,12 @@
                             <% } %>
             </div>
             <div class="modal-overlay" id="modal-<%= post.id %>">
+                <div style="position: fixed; left: 20px; top: 20px; color: white; font-size: 400;    -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;">X</div>
                 <div class="modal-content">
                     <% for(var j=0; j < post.images.length; j++) { var image=post.images[j]; %>
                         <img src="/posts/<%= post.id %>/<%= image %>" class="modal-image">

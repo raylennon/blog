@@ -3,14 +3,19 @@ import { ImprovedNoise } from 'https://unpkg.com/three/examples/jsm/math/Improve
 // Set up the scene
 const scene = new THREE.Scene();
 const canvas = document.getElementById("myCanvas");
-canvas.setAttribute("width", window.width/2)
+// canvas.setAttribute("width", window.width/2)
+canvas.height=160;
+canvas.width=300;
+
+
 // Set up the camera
 const camera = new THREE.PerspectiveCamera(75, canvas.width / canvas.height, 0.1, 1000);
-camera.position.z = 3;
-
+camera.position.z = 5;
+camera.position.y=-1.2;
 // Set up the renderer
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
 renderer.setClearColor(0x000000, 0);
+renderer.setPixelRatio( window.devicePixelRatio );
 
 const width = canvas.width;
 const height = canvas.height;
@@ -99,10 +104,10 @@ function animate() {
 }
 animate();
 
-window.addEventListener('resize', function () {
-  const width = canvas.width;
-  const height = canvas.height;
-  renderer.setSize(width, height);
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-});
+// window.addEventListener('resize', function () {
+//   const width = canvas.width;
+//   const height = canvas.height;
+//   renderer.setSize(width, height);
+//   camera.aspect = width / height;
+//   camera.updateProjectionMatrix();
+// });

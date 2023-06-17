@@ -1,4 +1,0 @@
-At Duke, I'm leading my own research project in the area of metal additively-manufactured lattice structures for bone implants!
-
-As part of the <a href="http://gallgroup.pratt.duke.edu/">Gall Group</a>, I design, manufacture, test, and simulate gyroid structures made from Ti64Al4V and study how their varying geometry affects their structural properties. This structures are designed to "osiointegrate" - meaning that the bone they're 
-  surrounded with in the body is able to grow into them. I'm aiming to publish a paper with my findings in the fall. Stay tuned!

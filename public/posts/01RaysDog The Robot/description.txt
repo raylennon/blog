@@ -2,4 +2,6 @@ Over the past semester, during my office hours as a TA, I created a robot using 
 
 The robot, which, for lack of a better name, is currently "Ray's Dog", runs a python Flask server over campus wifi. It's equipped with a livestreaming camera, an LCD display for custom messages/ faces, and two bidirectional two motors.
 
-I showed off my robot dog at Duke's <a href="https://colab.duke.edu/">Innovation Co-Lab</a> Makerfair 2023 - he made a ton of new friends, and got some great recommendations for new features! Check out the constantly changing GitHub repository <a href="https://github.com/raylennon/RaysDog">here</a>.
+I showed off my robot dog at Duke's <a href="https://colab.duke.edu/">Innovation Co-Lab</a> Makerfair 2023 - he made a ton of new friends, and got some great recommendations for new features!
+
+<a href="https://github.com/raylennon/RaysDog">Check out his GitHub repository!</a>
