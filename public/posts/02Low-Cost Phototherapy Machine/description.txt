@@ -1,1 +1,5 @@
-I spent summer 2022 in Kampala, Uganda. I worked with a team of Duke and Makerere University students. We designed and prototyped a low-cost, locally sourced phototherapy device for treating neonatal jaundice. 
+During DukeEngage Uganda, I lived and collaborated with Biomedical students at Makerere University, to create novel engineering solutions for local healthcare related challenges. The program’s mission seeks to implement a design process that prioritizes addressing well-scoped, high-impact problems using techniques that are suited for a low-income environment with limited raw materials. 
+
+To become better-informed about community needs, I traveled to hospitals throughout Kampala, conducting ethnographic research by interviewing healthcare workers and observing current systems in place. After witnessing jaundiced newborns in overcrowded lightboxes, my team designed and built a low-cost phototherapy machine. 
+
+Our functioning prototype was presented to medical staff at local hospitals and was assembled with materials totaling approximately 20% the cost of comparable industry solutions. 
