@@ -5,7 +5,7 @@ import pillow_heif
 import glob
 import os
 
-path = r'public/posts/01DukeEngage Uganda/*.HEIC'
+path = r'public/posts/02Low-Cost Phototherapy Machine/*.HEIC'
 files = glob.glob(path)
 for file in files:
     try:
