@@ -45,6 +45,12 @@
                                 <% } %>
                 </div>
                 <div class="modal-overlay" id="modal-<%= post.id %>">
+                    <div style="position: fixed; left: 20px; top: 20px; color: white; font-size: 400;    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;">X</div>
                     <div class="modal-content">
                         <% for(var j=0; j < post.images.length; j++) { var image=post.images[j]; %>
                             <img src="/posts/<%= post.id %>/<%= image %>" class="modal-image">
