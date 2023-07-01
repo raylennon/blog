@@ -20,6 +20,16 @@ app.set('view engine', 'ejs');
 
 const postsDir = './public/posts';
 
+app.get('*', (req, res, next) => {
+  const subdomain = req.subdomains[0];
+  if (subdomain === 'dog') {
+    res.send('Welcome to dog! (still in progress, obviously...');
+  } else {
+    // Redirect all other subdomains to a 404 page
+    next();
+  }
+});
+
 app.get('/posts/:postId/description', (req, res) => {
   const { postId } = req.params;
   const descriptionFile = path.join(postsDir, postId, 'description.txt');
