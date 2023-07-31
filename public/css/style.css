@@ -213,14 +213,17 @@ hr {
 
 #scrollToTop {
   position: fixed;
+  width:100%;
+  /* left: 41%; */
+  margin: 0 auto;
   bottom: 20px;
-  right: 20px;
+  /* right: 20px; */
+  text-align: center;
   padding: 10px;
-  background-color: white;
-  box-shadow: 0 0 10px 10px #ec707041;
-  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.709);
+  /* box-shadow: 0 0 10px 10px #ec707041; */
+  /* border: 1px solid #ccc; */
   border-radius: 20px;
-  cursor: pointer;
   display: none;
   font-size: 30pt;
   color: #535353;
@@ -230,7 +233,7 @@ hr {
   display: block;
 }
 
-@media (max-width: 767px) {
+@media (orientation: portrait) {
   #scrollToTop {
     display: none;
   }
