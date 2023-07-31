@@ -55,7 +55,7 @@ for (let i = 0; i < 5; i++) {
     const lineWidth = 0.6;
     const lineMaterial = new MeshLineMaterial({
         color: colors[i],
-        lineWidth: 0.2,
+        lineWidth: 0.18,
     });
 
     const meshLine = new MeshLine();

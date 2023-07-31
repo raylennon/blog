@@ -27,6 +27,7 @@ h2 {
   white-space: normal;
 }
 
+
 .fa {
   padding: 10px;
   font-size: 40px;
@@ -208,4 +209,29 @@ hr {
     font-size: 36px;
   }
 
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 0 10px 10px #ec707041;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  display: none;
+  font-size: 30pt;
+  color: #535353;
+}
+
+#scrollToTop.visible {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  #scrollToTop {
+    display: none;
+  }
 }

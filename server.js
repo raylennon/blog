@@ -154,6 +154,11 @@ app.get('/community', (req, res) => {
   });
 });
 
+app.get('/CV', (req, res) => {
+  var data =fs.readFileSync(path.join(__dirname, 'public', 'RayLennon_CV_07-23-2023.pdf'));
+  res.contentType("application/pdf");
+  res.send(data);
+})
 
 
 // The 404 Route (ALWAYS Keep this as the last route)

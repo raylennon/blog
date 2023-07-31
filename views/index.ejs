@@ -13,6 +13,9 @@
 </head>
 
 <body>
+    <div id="scrollToTop" class="visible">
+        <b>Scroll for more! ↓</b>
+    </div>
     <div style="text-align: center;">
         <canvas id="myCanvas" style="margin: 0 auto; width: 50%; padding-top: 15px; padding-bottom: 10px;"></canvas>
     </div>
@@ -22,12 +25,26 @@
         <a href="https://github.com/raylennon" class="fa fa-github"></a>
         <a href="mailto:rkl15@duke.edu" class="fa fa-envelope"></a>
     </div>
-    <div style="text-align:center; padding-bottom: 15px">
+    <div style="text-align:center; padding-bottom: 10px">
         <h2 style="margin-top: 25px;">
             <a href="/projects" style="color: #535353;">Projects</a>
             · <a href="/art" style="color: #535353;">Art</a>
             · <a href="/community" style="color: #535353;">Community</a>
         </h2>
+    </div>
+    <div id="CallToAction" style="text-align: center; max-width: 900px; margin: 0 auto;">
+        <p style="font-size: 16pt;">Hi! I&#39;m Ray – a senior at Duke University, studying Mechanical Engineering and
+            Computer Science. I’m also an artist, inventor, hacker, and occasional world traveler. My research
+            experience spans metal and polymer additive manufacturing, rapid prototyping,
+            computational simulation, mechanical design, and software development. I’m always
+            working on a slew of personal projects, too! Feel free to browse highlights of what I’ve been
+            up to recently. If you’d like to collaborate with me or share what you’re working on, please
+            reach out!
+            <br><br>
+            <b><a href="/CV" style="font-size: 20pt; ">Check out my CV</a> 📃🎓</b>
+        </p>
+
+
     </div>
     <% for(var i=0; i < posts.length; i++) { var post=posts[i]; %>
         <hr style="margin-top: 50px;">
@@ -35,8 +52,11 @@
             <div class="text-container">
                 <h2 style="margin-bottom: 0; padding-bottom: 0">
                     <%=post.id.slice(2)%>
-                </h2 >
-                <p style="font-size:25px;padding-top: 0px; margin-bottom: 0; width:  175px; border-radius: 20px;margin: auto; border-color: #8d8d8d"><%- posts[i].datebox %></p>
+                </h2>
+                <p
+                    style="font-size:25px;padding-top: 0px; margin-bottom: 0; width:  175px; border-radius: 20px;margin: auto; border-color: #8d8d8d">
+                    <%- posts[i].datebox %>
+                </p>
                 <!-- <p class="description" data-post="<%= post.id %>"></p> -->
                 <p><%- decodeURIComponent(encodeURIComponent(posts[i].description)) %></p>
                 <!-- </p> -->
@@ -66,6 +86,15 @@
             </div>
         </div>
         <% } %>
+        <hr style="margin-top: 50px;">
+        <div style="text-align:center; padding-bottom: 10px">
+            <h2 style="margin-top: 25px;">
+                <a href="/projects" style="color: #535353;">Projects</a>
+                · <a href="/art" style="color: #535353;">Art</a>
+                · <a href="/community" style="color: #535353;">Community</a>
+            </h2>
+            <h2><a href="#" style="color: #535353;">Back to Top 🚀</a></h2>
+        </div>
             <script>
                 document.querySelectorAll('.description').forEach(elem => {
                     const postId = elem.getAttribute('data-post');
@@ -110,7 +139,34 @@
             </script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/three.meshline@1.4.0/src/THREE.MeshLine.min.js"></script>
-            <script type="module" src="js/squiggle.js">
+            <script type="module" src="js/squiggle.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var scrollToTopElement = document.getElementById('scrollToTop');
+
+                    // Show the "scroll to top" div only when the user scrolls to the top
+                    window.addEventListener('scroll', function () {
+                        if (window.scrollY === 0) {
+                            scrollToTopElement.classList.add('visible');
+                        } else {
+                            scrollToTopElement.classList.remove('visible');
+                        }
+                    });
+
+                    // Scroll to top when the "scroll to top" div is clicked
+                    scrollToTopElement.addEventListener('click', function () {
+                        // For smooth scrolling behavior
+                        var scrollToTop = function () {
+                            var scrollStep = window.scrollY / 15;
+                            if (window.scrollY > 0) {
+                                window.scrollBy(0, -scrollStep);
+                                requestAnimationFrame(scrollToTop);
+                            }
+                        };
+
+                        scrollToTop();
+                    });
+                });
             </script>
 </body>
 
