@@ -159,6 +159,11 @@ app.get('/CV', (req, res) => {
   res.contentType("application/pdf");
   res.send(data);
 })
+app.get('/PhototherapyPoster', (req, res) => {
+  var data =fs.readFileSync(path.join(__dirname, 'public', 'PhototherapyPoster.pdf'));
+  res.contentType("application/pdf");
+  res.send(data);
+})
 
 
 // The 404 Route (ALWAYS Keep this as the last route)
