@@ -238,3 +238,10 @@ hr {
     display: none;
   }
 }
+
+#MouseOverLink {
+  color: #535353;
+}
+#MouseOverLink:hover {
+  color: #999999;
+}
