@@ -154,17 +154,20 @@ app.get('/community', (req, res) => {
   });
 });
 
-app.get('/CV', (req, res) => {
-  var data =fs.readFileSync(path.join(__dirname, 'public', 'RayLennon_CV_07-23-2023.pdf'));
-  res.contentType("application/pdf");
-  res.send(data);
-})
-app.get('/PhototherapyPoster', (req, res) => {
-  var data =fs.readFileSync(path.join(__dirname, 'public', 'PhototherapyPoster.pdf'));
-  res.contentType("application/pdf");
-  res.send(data);
-})
+const pdfRoutes = {
+  CV: 'RayLennon_CV_07-23-2023.pdf',
+  PhototherapyPoster: 'PhototherapyPoster.pdf',
+  CDCPaper: 'From Hospitals to Hurricanes - How APL Is Using Computational Fluid Dynamics to Inform the Future of Public Health and Safety.pdf'
+};
 
+for (const route in pdfRoutes) {
+  app.get(`/${route}`, (req, res) => {
+    const pdfPath = path.join(__dirname, 'public', pdfRoutes[route]);
+    const data = fs.readFileSync(pdfPath);
+    res.contentType('application/pdf');
+    res.send(data);
+  });
+}
 
 // The 404 Route (ALWAYS Keep this as the last route)
 app.get('*', function (req, res) {
