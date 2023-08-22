@@ -157,15 +157,24 @@ app.get('/community', (req, res) => {
 const pdfRoutes = {
   CV: 'RayLennon_CV_081123.pdf',
   PhototherapyPoster: 'PhototherapyPoster.pdf',
-  CDCPaper: 'From Hospitals to Hurricanes - How APL Is Using Computational Fluid Dynamics to Inform the Future of Public Health and Safety.pdf'
+  CDCPaper: 'From Hospitals to Hurricanes - How APL Is Using Computational Fluid Dynamics to Inform the Future of Public Health and Safety.pdf',
+  ProgrammedGeometricStiffness: 'Origami Architected Geometric Stiffness.png'
 };
 
 for (const route in pdfRoutes) {
   app.get(`/${route}`, (req, res) => {
     const pdfPath = path.join(__dirname, 'public', pdfRoutes[route]);
     const data = fs.readFileSync(pdfPath);
-    res.contentType('application/pdf');
-    res.send(data);
+
+    if (pdfRoutes[route].slice(-3) == 'pdf') {
+      res.contentType('application/pdf');
+      res.send(data);
+    }
+    else {
+      res.contentType('image/png');
+      res.set("Content-Disposition", "inline;");
+      res.sendFile(pdfPath)
+    }
   });
 }
 
