@@ -1,0 +1,5 @@
+I presented at my first conference - the 12th Annual <a href="https://constructal.org/">Constructal Law Conference</a>, in Turin, Italy!
+
+The conference draws scholars from around the world to discuss representational similarities and connections between many types of physical systems - from economics to geology - and discusses modelling them through the tenets of fundamental principles of heat & mass transfer. 
+
+My presentation reflected on the time evolution of online & physical social networks as hierarchical flow systems, and presented a framework for modelling the propagation of online information.

@@ -39,7 +39,7 @@
                     <% for(var j=0; j < initImages.length; j++) { %>
                         <% var image=initImages[j]; %>
                             <img src="/posts/<%= post.id %>/<%= image %>" class="post-image"
-                                style="width: <%= (90 / initImages.length) %>%;">
+                                style="width: <%= (90 / initImages.length) %>%;" loading="lazy">
                             <% } %>
             </div>
             <div class="modal-overlay" id="modal-<%= post.id %>">
@@ -51,7 +51,7 @@
                 user-select: none;">X</div>
                 <div class="modal-content">
                     <% for(var j=0; j < post.images.length; j++) { var image=post.images[j]; %>
-                        <img src="/posts/<%= post.id %>/<%= image %>" class="modal-image">
+                        <img src="/posts/<%= post.id %>/<%= image %>" class="modal-image" loading="lazy">
                         <% } %>
                 </div>
             </div>

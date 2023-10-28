@@ -22,7 +22,7 @@
     align-items: center;">
         <% images.forEach(image=> { %>
             <div class="image-container" onclick="openModal('/images/Art/<%= image %>')">
-                <img src="/images/Art/<%= image %>" alt="<%= image %>">
+                <img src="/images/Art/<%= image %>" alt="<%= image %>" loading="lazy">
             </div>
             <% }); %>
     </div>
