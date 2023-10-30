@@ -53,8 +53,14 @@ app.get('/', (req, res) => {
       return;
     }
 
-    const postDirs = files.filter(file => fs.statSync(path.join(postsDir, file)).isDirectory());
+    const postDirs = files.filter(file => {
+      const postDirPath = path.join(postsDir, file);
+      const isDirectory = fs.statSync(postDirPath).isDirectory();
+      const hasCategoriesFile = fs.existsSync(path.join(postDirPath, 'categories.txt'));
+      const categoriesContent = hasCategoriesFile ? fs.readFileSync(path.join(postDirPath, 'categories.txt'), 'utf8') : '';
 
+      return !hasCategoriesFile || !categoriesContent.includes('notmain');
+    });
     const posts = postDirs.map(postDir => {
       const postPath = path.join(postsDir, postDir);
       const images = fs.readdirSync(postPath).filter(file => /\.(png|jpe?g|gif)$/i.test(file));
