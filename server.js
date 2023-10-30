@@ -161,7 +161,7 @@ app.get('/community', (req, res) => {
 });
 
 const pdfRoutes = {
-  CV: 'RayLennon_CV_081123.pdf',
+  CV: 'RayLennon_CV_102923.pdf',
   PhototherapyPoster: 'PhototherapyPoster.pdf',
   CDCPaper: 'From Hospitals to Hurricanes - How APL Is Using Computational Fluid Dynamics to Inform the Future of Public Health and Safety.pdf',
   ProgrammedGeometricStiffness: 'Origami Architected Geometric Stiffness.png'
