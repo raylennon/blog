@@ -43,8 +43,6 @@
             <br><br>
             <b><a href="/CV" style="font-size: 20pt; ">Check out my CV</a> 📃🎓</b>
         </p>
-
-
     </div>
     <% for(var i=0; i < posts.length; i++) { var post=posts[i]; %>
         <hr style="margin-top: 50px;">
@@ -53,8 +51,8 @@
                 <h2 style="margin-bottom: 0; padding-bottom: 0">
                     <%=post.id.slice(2)%>
                 </h2>
-                <p
-                    style="font-size:25px;padding-top: 0px; margin-bottom: 0; width:  200px; border-radius: 20px;margin: auto; border-color: #8d8d8d">
+                <p class="date_info"
+                    style="padding-top: 0px; margin-bottom: 0;  border-radius: 20px;margin: auto; border-color: #8d8d8d">
                     <%- posts[i].datebox %>
                 </p>
                 <!-- <p class="description" data-post="<%= post.id %>"></p> -->

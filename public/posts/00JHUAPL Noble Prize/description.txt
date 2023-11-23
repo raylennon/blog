@@ -1,4 +1,4 @@
-I'm honored to have been awarded the 2022 Noble Prize for my contributions at the Johns Hopkins University Applied Physics Laboratory!
+I'm honored to have been awarded APL’s 2022 Noble Prize for “courageous pursuit of bold discovery” - one of 23 Annual Achievement Awards granted across the 8,500-person research organization.
 
 The award recognizes my team's work on the project MAINER (Manipulating Atmospheric Ice Nucleation Events, Redux), which targets the development of novel bio-derived cloud seeding applications. My role on the project involved performing data aggregation and analysis from satellite imagery, to uncover global patterns in high-atmospheric cloud formation. 
 

@@ -3,3 +3,5 @@ In September I presented original work for the first time at an international co
 The conference draws scholars from around the world to discuss representational similarities and connections between many types of physical systems - from economics to geology - and explores modelling them through the tenets of fundamental principles of heat & mass transfer.
 
 My presentation, A Constructal Perspective on the Time Evolution of Social Networks, reflected on the propagation of online & physical social networks as hierarchical flow systems, and presented a framework for modelling the propagation of online information.
+
+My professor and mentor, Professor Bejan was awarded the <a href="https://www.fi.edu/en/awards">Benjamin Franklin Medal</a> in 2018 for "his pioneering interdisciplinary contributions in thermodynamics and convection heat transfer that have improved the performance of engineering systems, and for constructal theory, which predicts natural design and its evolution in engineering, scientific, and social systems.”
