@@ -4,6 +4,7 @@ body {
   background-color: #ffffff;
   font-family: 'Roboto', sans-serif;
 }
+
 #myCanvas {
   /* position: absolute; */
   top: 10px;
@@ -14,6 +15,7 @@ body {
   display: block;
   /* width: 800px; */
 }
+
 a {
   color: #ec7070
 }
@@ -26,7 +28,6 @@ h1 {
 
 h2 {
   color: #535353;
-  font-size: 50px;
   font-family: 'Roboto';
   margin-top: 0;
   white-space: normal;
@@ -71,7 +72,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 30px 0;
-  width:100%;
+  /* width:100%; */
 }
 
 .reverse {
@@ -85,12 +86,7 @@ h2 {
   white-space: pre-line;
 }
 
-p {
-  font-family: 'Roboto';
-  margin-left: 70px;
-  margin-right: 70px;
-  font-size: 20px;
-}
+
 
 hr {
   width: 50%;
@@ -150,30 +146,37 @@ hr {
   /* Subtract padding from the available viewport width */
 }
 
-.see-more-button {
-  display: inline-block;
-  padding: 15px 30px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #727272;
-  border: none;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-  margin-bottom: 30px
-}
+
 
 .see-more-button:hover {
   background-color: #555;
 }
 
 @media (orientation: landscape) {
+
+  .see-more-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #727272;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 30px
+  }
+
   .modal-image {
     max-width: 30%;
     max-height: 50%;
     margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 50px;
   }
 
   hr {
@@ -182,6 +185,10 @@ hr {
   }
 
   p {
+    font-size: 20px;
+    font-family: 'Roboto';
+    margin-left: 70px;
+    margin-right: 70px;
     font-size: 20px;
   }
 
@@ -205,15 +212,54 @@ hr {
     max-width: 100%;
     height: auto;
   }
+
+  .date_info {
+    font-size: 25px;
+    width: 200px;
+  }
+
+  .top_image {
+    width: 50%;
+  }
 }
 
 @media (orientation: portrait) {
-  
-  .see-more-button {
-    padding: 30px 60px;
-    font-size: 36px;
+
+  .top_image {
+    width: 100%;
   }
 
+  .see-more-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #727272;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+    margin-bottom: 30px
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 25px;
+    font-family: 'Roboto';
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  .date_info {
+    font-size: 40px;
+    width: 500px;
+  }
 }
 
 .home-button {
@@ -221,7 +267,7 @@ hr {
   top: 20px;
   left: 20px;
   z-index: 9999;
-
+  width: 10%;
 }
 
 .home-button a {
@@ -234,9 +280,10 @@ hr {
 
   /* Media query for mobile devices in landscape orientation */
   @media (orientation: portrait) {
-    font-size: 50px;
+    font-size: 20px;
+    top: 20px;
     /* Larger font size for landscape orientation */
-    padding: 20px 40px;
+    padding: 20px 20px;
     border-radius: 40px;
 
     /* Increase padding for landscape orientation */

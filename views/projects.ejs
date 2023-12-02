@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
         <a href="/">Home</a>
     </div>
     <div style="width: 100%; text-align: center;">
-        <img src="/images/ProjectsHeader.svg" style="margin: 0 auto; height: 25vh" />
+        <img class="top_image" src="/images/ProjectsHeader.svg" style="margin: 0 auto;" />
     </div>
     <div>
         <% for(var i=0; i < posts.length; i++) { var post=posts[i]; %>
@@ -28,7 +30,7 @@
                         <%=post.id.slice(2)%>
                     </h2>
                     <p
-                        style="font-size:25px;padding-top: 0px; margin-bottom: 0; width:  175px; border-radius: 20px;margin: auto; border-color: #8d8d8d">
+                        style="padding-top: 0px; margin-bottom: 0; width:  300px; border-radius: 20px;margin: auto; border-color: #8d8d8d">
                         <%- posts[i].datebox %>
                     </p>
                     <!-- <p class="description" data-post="<%= post.id %>"></p> -->
