@@ -89,6 +89,10 @@ app.get('/art', (req, res) => {
         const extname = path.extname(file).toLowerCase();
         return extname === '.jpg' || extname === '.jpeg' || extname === '.png' || extname === '.gif';
       });
+      imageFiles.sort((a, b) => {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+      });
+
       res.render('art', { images: imageFiles });
     }
   });
