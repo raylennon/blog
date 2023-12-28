@@ -76,10 +76,12 @@ app.get('/', (req, res) => {
     res.render('index.ejs', { posts: posts, ejs: ejs });
   });
 });
-app.get('/art', (req, res) => {
+app.get('/art', (req, res) => { // when you go to /Art... 
   // get list of all image files in public/images folder
+
   const fs = require('fs');
   const dirPath = path.join(__dirname, 'public', 'images/Art');
+  
   fs.readdir(dirPath, (err, files) => {
     if (err) {
       console.log('Error getting images: ', err);
@@ -89,6 +91,7 @@ app.get('/art', (req, res) => {
         const extname = path.extname(file).toLowerCase();
         return extname === '.jpg' || extname === '.jpeg' || extname === '.png' || extname === '.gif';
       });
+      
       imageFiles.sort((a, b) => {
         return a.toLowerCase().localeCompare(b.toLowerCase());
       });
