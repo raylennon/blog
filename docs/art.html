@@ -1,0 +1,141 @@
+<html>
+<!DOCTYPE html>
+<head>
+    <!-- <meta name="viewport" content="initial-scale=1.0"> -->
+    <title>Ray Lennon</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/art.css">
+</head>
+
+<body>
+    <div class="home-button" style="position: fixed; top: 10px; left: 10px;">
+        <a href="index.html">Home</a>
+    </div>
+    <div style="width: 100%; text-align: center;">
+        <img src="images/ArtHeader.svg" style="margin: 0 auto; height: 25vh; object-fit: contain; margin-bottom: 5vh;" />
+    </div>
+    <div style="width:100%; display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
+        
+            <div class="image-container" onclick="openModal('/images/Art/20220708_175637.jpg')">
+                <img src="images/Art/20220708_175637.jpg" alt="20220708_175637.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/3.gif')">
+                <img src="images/Art/3.gif" alt="3.gif" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/d_Unicycles.jpg')">
+                <img src="images/Art/d_Unicycles.jpg" alt="d_Unicycles.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/e_multisectionpencil.jpg')">
+                <img src="images/Art/e_multisectionpencil.jpg" alt="e_multisectionpencil.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/e.JPG')">
+                <img src="images/Art/e.JPG" alt="e.JPG" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/e1.jpg')">
+                <img src="images/Art/e1.jpg" alt="e1.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/Emus.JPG')">
+                <img src="images/Art/Emus.JPG" alt="Emus.JPG" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/Flowers.jpg')">
+                <img src="images/Art/Flowers.jpg" alt="Flowers.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/g_LaikaTriptych.jpg')">
+                <img src="images/Art/g_LaikaTriptych.jpg" alt="g_LaikaTriptych.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/Giraffe.jpg')">
+                <img src="images/Art/Giraffe.jpg" alt="Giraffe.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/Giraffe1.jpg')">
+                <img src="images/Art/Giraffe1.jpg" alt="Giraffe1.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/Giraffe2.jpg')">
+                <img src="images/Art/Giraffe2.jpg" alt="Giraffe2.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_1320.jpg')">
+                <img src="images/Art/IMG_1320.jpg" alt="IMG_1320.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_1321.png')">
+                <img src="images/Art/IMG_1321.png" alt="IMG_1321.png" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_1324.jpg')">
+                <img src="images/Art/IMG_1324.jpg" alt="IMG_1324.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_14.jpg')">
+                <img src="images/Art/IMG_14.jpg" alt="IMG_14.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_1672.jpg')">
+                <img src="images/Art/IMG_1672.jpg" alt="IMG_1672.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_1677.jpg')">
+                <img src="images/Art/IMG_1677.jpg" alt="IMG_1677.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/IMG_1767.jpg')">
+                <img src="images/Art/IMG_1767.jpg" alt="IMG_1767.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/Polar.jpg')">
+                <img src="images/Art/Polar.jpg" alt="Polar.jpg" loading="lazy">
+            </div>
+            
+            <div class="image-container" onclick="openModal('/images/Art/RobotAndKiwi.jpg')">
+                <img src="images/Art/RobotAndKiwi.jpg" alt="RobotAndKiwi.jpg" loading="lazy">
+            </div>
+            
+    </div>
+
+    <div class="modal" onclick="closeModal()">
+        <img class="modal-content modal-image" src="art.html" alt="">
+    </div>
+    <script>
+        function openModal(src) {
+            var modal = document.querySelector('.modal');
+            var modalContent = modal.querySelector('.modal-content');
+            var modalImage = modal.querySelector('.modal-image');
+            modalImage.onload = function () {
+                var width = modalImage.naturalWidth;
+                var height = modalImage.naturalHeight;
+                var maxWidth = window.innerWidth * 0.9;
+                var maxHeight = window.innerHeight * 0.9;
+                var aspectRatio = width / height;
+                modalImage.style.maxHeight = maxHeight + 'px';
+                modalImage.style.maxWidth = Math.round(maxHeight * aspectRatio) + 'px';
+
+            };
+            modalContent.src = src;
+            modal.classList.add('active');
+        }
+        function closeModal() {
+            var modal = document.querySelector('.modal');
+            modal.classList.remove('active');
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three.meshline@1.4.0/src/THREE.MeshLine.min.js"></script>
+    </script>
+</body>
+
+</html>

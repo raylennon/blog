@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  background-image: url("../images/TwoDesks.png");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #ec7070
+}
+
+h1 {
+  color: #535353;
+  font-size: 200px;
+  font-family: 'Roboto';
+}
+
+h2 {
+  color: #535353;
+  font-size: 50px;
+  font-family: 'Roboto';
+  margin-top: 0;
+  white-space: normal;
+}
+
+
+.fa {
+  padding: 10px;
+  font-size: 40px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 15px 2px 15px 15px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #ec7070;
+  color: white;
+}
+
+.fa-instagram {
+  background: #ec7070;
+  color: white;
+}
+
+.fa-github {
+  background: #ec7070;
+  color: white;
+}
+
+.fa-envelope {
+  background: #ec7070;
+  color: white;
+}
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-container {
+  text-align: center;
+  width: 100%;
+  /* Updated to 100% for mobile */
+  white-space: pre-line;
+}
+
+p {
+  font-family: 'Roboto';
+  margin-left: 70px;
+  margin-right: 70px;
+  font-size: 20px;
+}
+
+hr {
+  width: 50%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.modal-image {
+  max-width: 90%;
+  max-height: 50%;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  text-align: center;
+  width: 100%;
+  max-height: 800px;
+  /* display: flex; */
+  object-fit: contain;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.additional-image {
+  display: none;
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 17, 17, 0.90);
+  z-index: 9999;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  /* Include padding in the dimensions */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.modal-content {
+  max-height: calc(100vh - 40px);
+  /* Subtract padding from the available viewport height */
+  max-width: calc(100vw - 40px);
+  /* Subtract padding from the available viewport width */
+}
+
+.see-more-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #727272;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  margin-bottom: 30px
+}
+
+.see-more-button:hover {
+  background-color: #555;
+}
+
+@media (orientation: landscape) {
+  .modal-image {
+    max-width: 30%;
+    max-height: 50%;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    margin-bottom: 100px;
+    margin-bottom: 100px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  /* .post-container {
+    flex-direction: row;
+  } */
+
+  .text-container {
+    width: 50%;
+  }
+
+  .image-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 450px;
+    width: 50%;
+  }
+
+  .image-container img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+  }
+  .date_info {
+    font-size:25px;
+    width:  200px;
+  }
+}
+
+@media (orientation: portrait) {
+  
+  .see-more-button {
+    padding: 30px 60px;
+    font-size: 36px;
+  }
+  p {
+    font-size: 40px;
+  }
+  .date_info {
+    font-size: 40px;
+    width:  500px;
+  }
+
+}
+
+#scrollToTop {
+  position: fixed;
+  width:100%;
+  /* left: 41%; */
+  margin: 0 auto;
+  bottom: 20px;
+  /* right: 20px; */
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.709);
+  /* box-shadow: 0 0 10px 10px #ec707041; */
+  /* border: 1px solid #ccc; */
+  border-radius: 20px;
+  display: none;
+  font-size: 30pt;
+  color: #535353;
+}
+
+#scrollToTop.visible {
+  display: block;
+}
+
+@media (orientation: portrait) {
+  #scrollToTop {
+    display: none;
+  }
+}
+
+#MouseOverLink {
+  color: #535353;
+}
+#MouseOverLink:hover {
+  color: #999999;
+}
