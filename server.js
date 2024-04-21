@@ -73,7 +73,7 @@ app.get('/', (req, res) => {
       };
     });
 
-    res.render('index.ejs', { posts: posts, ejs: ejs });
+    res.render('index.html', { posts: posts, ejs: ejs });
   });
 });
 app.get('/art', (req, res) => { // when you go to /Art... 
@@ -96,7 +96,7 @@ app.get('/art', (req, res) => { // when you go to /Art...
         return a.toLowerCase().localeCompare(b.toLowerCase());
       });
 
-      res.render('art', { images: imageFiles });
+      res.render('art.html', { images: imageFiles });
     }
   });
 });
@@ -130,7 +130,7 @@ app.get('/projects', (req, res) => {
       };
     });
 
-    res.render('projects.ejs', { posts: posts, ejs: ejs });
+    res.render('projects.html', { posts: posts, ejs: ejs });
   });
 });
 
@@ -163,7 +163,7 @@ app.get('/community', (req, res) => {
       };
     });
 
-    res.render('community.ejs', { posts, ejs });
+    res.render('community.html', { posts, ejs });
   });
 });
 
