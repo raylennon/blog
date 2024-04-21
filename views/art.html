@@ -1,0 +1,61 @@
+<html>
+<!DOCTYPE html>
+<head>
+    <!-- <meta name="viewport" content="initial-scale=1.0"> -->
+    <title>Ray Lennon</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/art.css">
+</head>
+
+<body>
+    <div class="home-button" style="position: fixed; top: 10px; left: 10px;">
+        <a href="/">Home</a>
+    </div>
+    <div style="width: 100%; text-align: center;">
+        <img src="/images/ArtHeader.svg" style="margin: 0 auto; height: 25vh; object-fit: contain; margin-bottom: 5vh;" />
+    </div>
+    <div style="width:100%; display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;">
+        <% images.forEach(image=> { %>
+            <div class="image-container" onclick="openModal('/images/Art/<%= image %>')">
+                <img src="/images/Art/<%= image %>" alt="<%= image %>" loading="lazy">
+            </div>
+            <% }); %>
+    </div>
+
+    <div class="modal" onclick="closeModal()">
+        <img class="modal-content modal-image" src="" alt="">
+    </div>
+    <script>
+        function openModal(src) {
+            var modal = document.querySelector('.modal');
+            var modalContent = modal.querySelector('.modal-content');
+            var modalImage = modal.querySelector('.modal-image');
+            modalImage.onload = function () {
+                var width = modalImage.naturalWidth;
+                var height = modalImage.naturalHeight;
+                var maxWidth = window.innerWidth * 0.9;
+                var maxHeight = window.innerHeight * 0.9;
+                var aspectRatio = width / height;
+                modalImage.style.maxHeight = maxHeight + 'px';
+                modalImage.style.maxWidth = Math.round(maxHeight * aspectRatio) + 'px';
+
+            };
+            modalContent.src = src;
+            modal.classList.add('active');
+        }
+        function closeModal() {
+            var modal = document.querySelector('.modal');
+            modal.classList.remove('active');
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three.meshline@1.4.0/src/THREE.MeshLine.min.js"></script>
+    </script>
+</body>
+
+</html>
