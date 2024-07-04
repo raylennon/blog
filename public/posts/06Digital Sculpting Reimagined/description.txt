@@ -1,3 +1,0 @@
-I've long been interested in computer graphics and digital sculpture. In ARTSVIS 198 - Experimental Interface Design, I had the chance to imagine a new way of experiencing sculpture through a digital lens. My project, dubbed 'Sculpture 2.0', envisioned a way to generate 3d objects using a combination of VR, hand-tracking, and AI.
-
-To create a demonstration of my concept, I drew mock-ups and created a side-by-side video of the product demo. Check out a <a href="https://youtu.be/C8_8pu_ZhRo">demonstration of a sculpture timelapse</a> as a 3D environmental overlay, and see <a href="https://youtu.be/VEd5wjOvqq0">this demo</a> of the proposed hand-tracking sculpture features. 
