@@ -1,0 +1,5 @@
+Early in the Fall 2020 semester, I joined a new virtual undergraduate research team, mentored by Dr. Ingrid Daubechies, Professor, Electrical and Computer Engineering. In a collaboration between the North Carolina Museum of Art (NCMA) and Duke Math Department, our challenge was to develop algorithms and user interfaces in MATLAB to detect and repair cracks in digital photographs of 12th-century Jacopino frescos, and restore colors based on mathematical sampling.
+
+Over 11 months, I had two roles: first, I developed linear-algebra based algorithm for surface anomaly detection in digital photographs. The algorithm would "inpaint", or correct, the areas of the paintings that had been scratched or blemished. 
+
+Secondly, I used my background in computer graphics to enable a virtual exhibit of paintings that feature gold leaf backings; the reflective, glinting nature of these artworks didn't come across in photographs, so I spearheaded an effort to render them in a way that would enable future VR exhibits that shift dynamically based on the user's perspective. 
