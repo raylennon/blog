@@ -1,5 +1,0 @@
-Duke eNable is a student-run organization that creates low cost, opensource, 3D printed prosthetic devices for amputees in the Durham community. Over the last year, I've served as a designer on Team Jack, which serves a member of the community who wants to resume running with weights despite the loss of his hand.
-
-I developed open-source hardware using my experience in CAD, additive manufacturing, and organic surface modelling. In particular, I was able to independently reverse-engineer the mechanism behind ‘Boa’ dial-tightened boots, and apply the same underlying technology to create comfortable low-cost prosthetic mounts. Through developments in 3D scanning, electronics fabrication, casting, and additive manufacturing, we’re still striving to improve prosthetic technologies in ways that lower costs and mechanical complexity, while keeping the aspects that most improve users’ day-to-day life. 
-
-I'm excited to start a new role on team Leyman - which will also design a prosthetic for a Durham individual who lost his hand - next fall!
