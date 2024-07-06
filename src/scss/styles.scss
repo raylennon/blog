@@ -1,0 +1,27 @@
+@import "bootstrap/scss/bootstrap";
+
+@include color-mode(dark) {
+    body {
+        background-color: rgb(18, 18, 18);
+        overflow-x: hidden;
+    }
+}
+
+// * {  }
+.text-truncate-container p {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media only screen and (min-width:767px) {
+    .spacer {
+        padding-top: 13vh;
+        // padding-bottom: 40px
+    }
+}
+
+.text-large {
+    font-size: 130%;
+}
