@@ -1,5 +1,0 @@
-For my first-year engineering design course, I spent eight months programming a dead-reckoning motion tracking algorithm for undersea rovers. Off the coast of Chile, seaweed farmers face danger by diving to cut and collect seaweed stalks. Creating a robot for this operation is challenged by the lack of visibility underwater. 
-
-To solve this challenge, my team was tasked with developing a dead-reckoning orientation system informed by the motion of the ROV's wheels. I examined how sand drift, encoder imprecision, and sea currents affect the accuracy of localization, and my code is currently in use by coastal farms in Chile for tracking remotely operated seaweed harvesting robots. 
-
- Check out a video of our prototype rover and tracking system <a href="https://www.youtube.com/watch?v=rB9gmJslB1U">here</a>, and check out my <a href="https://github.com/EGR101-SeaweedRoomba/SeaweedRoomba">GitHub repository</a>.

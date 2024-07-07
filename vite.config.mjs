@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import { ViteEjsPlugin } from "vite-plugin-ejs";
-// import { fs } from "fs";
-// const path = require('path')
+
+import { resolve } from 'path'
 
 import fs from 'fs'
 import fsPromises from 'fs'
@@ -12,17 +12,18 @@ var posts_info = [];
 
 const files = fsPromises.readdirSync(postsDir);
 
-const postDirs = files.filter(file => {
+var postDirs = files.filter(file => {
   const postDirPath = path.join(postsDir, file);
   const isDirectory = fs.statSync(postDirPath).isDirectory();
   const hasCategoriesFile = fs.existsSync(path.join(postDirPath, 'categories.txt'));
   const categoriesContent = hasCategoriesFile ? fs.readFileSync(path.join(postDirPath, 'categories.txt'), 'utf8') : '';
   return !hasCategoriesFile || !categoriesContent.includes('notmain');
 });
+postDirs.sort().reverse();
 posts_info = postDirs.map(postDir => {
   const postPath = path.join(postsDir, postDir);
   const images = fs.readdirSync(postPath).filter(file => /\.(png|jpe?g|gif)$/i.test(file));
-
+  
   return {
     id: postDir,
     images,
@@ -31,6 +32,15 @@ posts_info = postDirs.map(postDir => {
   };
 }
 );
+
+const art_2D_files = fsPromises.readdirSync("./src/art_2D");
+const art_2d_filtered = art_2D_files.filter(file => {
+  const extname = path.extname(file).toLowerCase();
+  return extname === '.jpg' || extname === '.jpeg' || extname === '.png' || extname === '.gif';
+});
+art_2d_filtered.sort((a, b) => {
+  return a.toLowerCase().localeCompare(b.toLowerCase());
+});
 
 // app.locals.moment = moment;
 
@@ -48,6 +58,15 @@ export default {
   plugins: [
     ViteEjsPlugin({
       posts: posts_info,
+      art_files: art_2d_filtered
     }),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, './src/index.html'),
+        nested: resolve(__dirname, './src/art/index.html'),
+      },
+    },
+  },
 }

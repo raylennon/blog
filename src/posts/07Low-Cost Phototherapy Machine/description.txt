@@ -1,0 +1,9 @@
+During DukeEngage Uganda, I lived and collaborated with Biomedical students at Makerere University, to create novel engineering solutions for local healthcare related challenges. The program prioritizes  well-scoped, high-impact problems using techniques that are suited for a low-income environments.
+
+To become better-informed about community needs,  my team traveled to hospitals throughout Kampala, conducting ethnographic research by interviewing healthcare workers and observing current systems in place. After witnessing jaundiced newborns in overcrowded lightboxes, my team designed and built a low-cost phototherapy machine. 
+
+Our functioning prototype was presented to medical staff at local hospitals and was assembled with materials totaling approximately 20% the cost of comparable industry solutions. Its electronics include recycled medical-grade LEDs and a locally etched PCB board. We also designed the hardware to be manufactured and assembled by local tradesmen, including window, furniture, and coffin makers. 
+
+Our project was presented at Ugandan Safe Motherhood Conference, Health Promotion Conference Uganda, and Uganda Pediatrician Conference 2022
+
+<a href="/PhototherapyPoster" target="_blank">Link to the full poster 📃</a>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ray Lennon: Art</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" bg-dark>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="color: rgb(255, 138, 138)"><b>Ray.Red</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/art/">Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projects/">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/community/">Community</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mx-auto text-center">
+    <div class="row">
+        <% art_files.forEach(image=> { %>
+            <img style="max-width: 30rem; object-fit: contain;" src="../art_2D/<%= image %>" alt="<%= image %>"
+                loading="lazy" onclick="openModal('../art_2D/<%= image %>')">
+            <% }); %>
+    </div>
+    <div class="modal" onclick="closeModal()">
+        <img class="modal-content modal-image" src="" alt="">
+    </div>
+</div>
+</body>
+
+<script type="module" src="art.js"></script>
+<script>
+    function openModal(src) {
+            var modal = document.querySelector('.modal');
+            var modalContent = modal.querySelector('.modal-content');
+            var modalImage = modal.querySelector('.modal-image');
+            modalImage.onload = function () {
+                var width = modalImage.naturalWidth;
+                var height = modalImage.naturalHeight;
+                var maxWidth = window.innerWidth * 0.9;
+                var maxHeight = window.innerHeight * 0.9;
+                var aspectRatio = width / height;
+                modalImage.style.maxHeight = maxHeight + 'px';
+                modalImage.style.maxWidth = Math.round(maxHeight * aspectRatio) + 'px';
+
+            };
+            modalContent.src = src;
+            modal.classList.add('active');
+        }
+        function closeModal() {
+            var modal = document.querySelector('.modal');
+            modal.classList.remove('active');
+        }
+</script>
+</html>

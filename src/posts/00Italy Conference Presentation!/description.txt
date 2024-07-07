@@ -1,9 +1,0 @@
-In September I presented original work for the first time at an international conference -the 12th Annual <a href="https://constructal.org/">Constructal Law Conference</a>, in Turin, Italy!
-
-The conference draws scholars from around the world to discuss representational similarities and connections between many types of physical systems - from economics to geology - and explores modelling them through the tenets of fundamental principles of heat & mass transfer.
-
-My presentation, <i>A Constructal Perspective on the Time Evolution of Social Networks</i>, reflected on the propagation of online & physical social networks as hierarchical flow systems, and presented a framework for modelling the propagation of online information.
-
-My professor and mentor, <a href="https://mems.duke.edu/faculty/adrian-bejan">Professor Adrian Bejan</a> was awarded the <a href="https://www.fi.edu/en/awards">Benjamin Franklin Medal</a> in 2018 for "his pioneering interdisciplinary contributions in thermodynamics and convection heat transfer that have improved the performance of engineering systems, and for constructal theory, which predicts natural design and its evolution in engineering, scientific, and social systems.”
-
- <a href="https://constructal.org/wp-content/uploads/2023/12/Proceedings-of-the-12th-Constructal-Law-Conference_V3.pdf">Link to Conference Proceedings</a> 📃

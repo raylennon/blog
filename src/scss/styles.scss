@@ -1,5 +1,8 @@
 @import "bootstrap/scss/bootstrap";
 
+// @import "navbar";
+
+
 @include color-mode(dark) {
     body {
         background-color: rgb(18, 18, 18);
@@ -24,4 +27,11 @@
 
 .text-large {
     font-size: 130%;
+}
+
+.btn-primary {
+    background-color: rgb(256, 138, 138); 
+    border-style: none;
+    color:rgb(18, 18, 18);
+    // text-emphasis-style: bold;
 }
