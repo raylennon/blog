@@ -23,7 +23,7 @@ postDirs.sort().reverse();
 posts_info = postDirs.map(postDir => {
   const postPath = path.join(postsDir, postDir);
   const images = fs.readdirSync(postPath).filter(file => /\.(png|jpe?g|gif)$/i.test(file));
-  
+
   return {
     id: postDir,
     images,
@@ -69,5 +69,7 @@ export default {
         nested: resolve(__dirname, './src/art/index.html'),
       },
     },
+    outDir: '../docs',
+    emptyOutDir: true, // also necessary
   },
 }
