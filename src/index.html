@@ -31,7 +31,7 @@
             <a class="nav-link" href="/community/">Community</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/CV.pdf">CV</a>
+            <a class="nav-link" target="_blank" href="/CV.pdf">CV</a>
           </li>
         </ul>
       </div>
@@ -47,10 +47,10 @@
         <h6 class=" mb-4 text-muted">* pending</h2>
       </div>
       <div class="col-md-auto mx-5">
-        <img src="./ray.png" width="160rem" style="filter: drop-shadow(0 0 50px rgb(256, 138, 138));">
+        <img class="profile" src="./ray.png" width="160rem" style="filter: drop-shadow(0 0 50px rgb(256, 138, 138));">
       </div>
     </div>
-    <p class="mb-4 mx-auto text-large" style="max-width: 60rem">Hi! I'm Ray – a graduate student at MIT, studying
+    <p class="mb-4 mx-auto welcome" style="max-width: 60rem">Hi! I'm Ray – a graduate student at MIT, studying
       Mechanical Engineering in pursuit of a PhD. My research experience spans metal and polymer additive manufacturing,
       rapid prototyping, computational simulation, mechanical design, and software development. I’m always working on a
       slew of personal projects, too! Feel free to browse highlights of what I’ve been up to recently.</p>
@@ -113,12 +113,16 @@
                         </button>
                         <a href="#<%=post.id.slice(2)%>" class="card-link mx-2" style=" text-decoration: none; ">🔗</a>
                         <span class="ms-auto">
-                              <% for(var j=0; j < post.categories.length; j++) { %>
-                          <span class="badge badge-pill bg-secondary"><%=post.categories[j]%></span>
-                          <%}%>
+                          <% for(var j=0; j < post.categories.length; j++) { %>
+                            <%if (post.categories[j].length> 1) { %>
+                              <a href="/<%=post.categories[j]%>/">
+                                <span class="badge badge-pill bg-secondary">
+                                  <%=post.categories[j]%>
+                                </span>
+                              </a>
+                              <%}}%>
                         </span>
                       </div>
-
                 </div>
       </div>
       <% } %>

@@ -8,6 +8,11 @@
         background-color: rgb(18, 18, 18);
         overflow-x: hidden;
     }
+
+}
+
+a {
+    color: rgb(356, 138, 138);
 }
 
 // * {  }
@@ -23,6 +28,12 @@
         padding-top: 13vh;
         // padding-bottom: 40px
     }
+    
+    .welcome {
+        padding-top: 7px;
+        padding-bottom: 15px;
+        font-size: 20.8px;
+    }
 }
 
 .text-large {
@@ -34,4 +45,24 @@
     border-style: none;
     color:rgb(18, 18, 18);
     // text-emphasis-style: bold;
+}
+.btn-primary:hover, .btn-primary:active:focus {
+    background-color: rgb(187, 73, 73); 
+    border-style: none;
+    color:rgb(227, 227, 227);
+    // text-emphasis-style: bold;
+}
+// .btn-primary:hover {
+//     background-color: rgb(187, 73, 73); 
+//     border-style: none;
+//     color:rgb(227, 227, 227);
+//     // text-emphasis-style: bold;
+// }
+@media only screen and (max-width:767px) {
+    .profile {
+        padding-bottom: 2rem;
+    }
+    .welcome {
+        font-size: 16px;
+    }
 }
