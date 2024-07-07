@@ -4,4 +4,4 @@ I'm excited to say that my first public, peer-reviewed publication is out! A CDC
 
 Throughout the project, I created interactive applications to explore data from airflow simulations of surgical environments. Currently, the CDC is applying my team's results to make operating rooms safer and contaminant-free by optimizing the configuration of vents and objects in these rooms to divert particle flows away from medical staff.
 
-Read the <a href="/CDCPaper">full paper</a>, or view the page for the <a href="https://secwww.jhuapl.edu/techdigest/Home/Detail?Journal=J&VolumeID=36&IssueID=4">current APL Technical Digest issue</a>.
+Read the <a href="/CDCPaper.pdf">full paper</a>, or view the page for the <a href="https://secwww.jhuapl.edu/techdigest/Home/Detail?Journal=J&VolumeID=36&IssueID=4">current APL Technical Digest issue</a>.

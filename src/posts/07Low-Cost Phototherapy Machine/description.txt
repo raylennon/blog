@@ -6,4 +6,4 @@ Our functioning prototype was presented to medical staff at local hospitals and 
 
 Our project was presented at Ugandan Safe Motherhood Conference, Health Promotion Conference Uganda, and Uganda Pediatrician Conference 2022
 
-<a href="/PhototherapyPoster" target="_blank">Link to the full poster 📃</a>
+<a href="/PhototherapyPoster.pdf" target="_blank">Link to the full poster 📃</a>

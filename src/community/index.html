@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ray Lennon: Art</title>
+</head>
+
+<body style="margin: 0;">
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/" style="color: rgb(255, 138, 138)"><b>Ray.Red</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/art/">Art</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects/">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/community/">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/CV.pdf">CV</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row justify-content-md-center">
+    <% for(var i=0; i < posts.length; i++) { var post=posts[i]; %>
+      <%if (!post.categories.includes("community")) {continue;} else {%>
+        <div class="card p-4" style="max-width: 40rem" id="<%=post.id.slice(2)%>">
+          <% var initImages=post.images.filter(image=> image.startsWith('INIT')); %>
+            <% for(var j=0; j < 1; j++) { %>
+              <% var image=initImages[j]; %>
+                <img class="card-img-top" src="/posts/<%= post.id %>/<%= image %>" loading="lazy"
+                  style="height: 20rem; object-fit: cover;object-position: 50% 40%;">
+                <% } %>
+                  <div class="card-body text-truncate-container ">
+                    <h2 class="card-title">
+                      <%=post.id.slice(2)%>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 mb-3 "><%- posts[i].datebox %></h6>
+                        <p class="card-text " style="max-height: 10rem;"><%-post.description%></p>
+                        <div class="align-items-center d-flex">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#<%=i%>Modal">
+                            <b>Full Story</b>
+                          </button>
+                          <a href="#<%=post.id.slice(2)%>" class="card-link mx-2"
+                            style=" text-decoration: none; ">🔗</a>
+                          <span class="ms-auto">
+                          </span>
+                        </div>
+
+                  </div>
+        </div>
+        <% }} %>
+
+          <% for(var i=0; i < posts.length; i++) { var post=posts[i]; %>
+            <div class="modal fade" id="<%=i%>Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      <%=post.id.slice(2)%>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <%-post.description%>
+                      <div class="row justify-content-center">
+                        <% for(var j=0; j < post.images.length; j++) { %>
+                          <% var image=post.images[j]; %>
+                            <img class="card-img-top" src="/posts/<%= post.id %>/<%= image %>" loading="lazy"
+                              style="max-height: 30rem; object-fit: scale-down;">
+                            <% } %>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <% } %>
+  </div>
+  <div class="row text-center align-items-center">
+    <div class="col-xl py-4 mx-auto" onclick="window.scrollTo(0, 0);" onmouseover="" style="cursor: pointer;">
+      <h1>Back to Top 🚀</h1>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+
+<script type="module" src="./community.js"></script>
+</script>
+
+</html>

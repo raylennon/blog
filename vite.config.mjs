@@ -28,6 +28,7 @@ posts_info = postDirs.map(postDir => {
     id: postDir,
     images,
     description: fs.readFileSync(path.join(postPath, 'description.txt'), 'utf8'),
+    categories: fs.readFileSync(path.join(postPath, 'categories.txt'), 'utf8').split(" "),
     datebox: fs.readFileSync(path.join(postPath, 'datebox.txt'), 'utf8')
   };
 }
