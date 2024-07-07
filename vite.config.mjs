@@ -66,7 +66,9 @@ export default {
     rollupOptions: {
       input: {
         main: resolve(__dirname, './src/index.html'),
-        nested: resolve(__dirname, './src/art/index.html'),
+        art: resolve(__dirname, './src/art/index.html'),
+        projects: resolve(__dirname, './src/projects/index.html'),
+        community: resolve(__dirname, './src/community/index.html'),
       },
     },
     outDir: '../docs',
