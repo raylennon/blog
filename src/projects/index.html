@@ -59,8 +59,16 @@
                           </button>
                           <a href="#<%=post.id.slice(2)%>" class="card-link mx-2"
                             style=" text-decoration: none; ">🔗</a>
-                          <span class="ms-auto">
-                          </span>
+                            <span class="ms-auto">
+                              <% for(var j=0; j < post.categories.length; j++) { %>
+                                <%if (post.categories[j].length> 1) { %>
+                                  <a href="/<%=post.categories[j]%>/">
+                                    <span class="badge badge-pill bg-secondary">
+                                      <%=post.categories[j]%>
+                                    </span>
+                                  </a>
+                                  <%}}%>
+                            </span>
                         </div>
                   </div>
         </div>
@@ -78,8 +86,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
+                    <h5 class="text-muted">
+                      <%=post.datebox%>
+                    </h5>
                     <%-post.description%>
-                      <div class="row justify-content-center">
+                      <div class="row justify-content-center mt-5">
                         <% for(var j=0; j < post.images.length; j++) { %>
                           <% var image=post.images[j]; %>
                             <img class="card-img-top" src="/posts/<%= post.id %>/<%= image %>" loading="lazy"
@@ -95,34 +106,9 @@
             </div>
             <% } %>
   </div>
-  <% for(var i=0; i < posts.length; i++) { var post=posts[i]; %>
-    <div class="modal fade" id="<%=i%>Modal" tabindex="-1" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              <%=post.id.slice(2)%>
-            </h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <%-post.description%>
-              <div class="row justify-content-center">
-                <% for(var j=0; j < post.images.length; j++) { %>
-                  <% var image=post.images[j]; %>
-                    <img class="card-img-top" src="/posts/<%= post.id %>/<%= image %>" loading="lazy"
-                      style="max-height: 30rem; object-fit: scale-down;">
-                    <% } %>
-              </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <% } %>
+
+  
+  
   <div class="row text-center align-items-center">
     <div class="col-xl py-4 mx-auto" onclick="window.scrollTo(0, 0);" onmouseover="" style="cursor: pointer;">
       <h1>Back to Top 🚀</h1>

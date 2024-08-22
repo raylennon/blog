@@ -1,7 +1,18 @@
 @import "bootstrap/scss/bootstrap";
 
-// @import "navbar";
 
+// required to get $orange variable
+@import "bootstrap/scss/functions"; 
+// @import "bootstrap/scss/variables";
+
+$primary: #ff8a8a; // set the $primary variable
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary
+));
+
+@import "bootstrap/scss/bootstrap";
 
 @include color-mode(dark) {
     body {
@@ -61,3 +72,6 @@ a {
         font-size: 16px;
     }
 }
+// .modal-body {
+//     padding-top: 20px;
+// }

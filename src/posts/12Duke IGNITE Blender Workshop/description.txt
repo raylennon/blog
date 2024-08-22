@@ -1,0 +1,5 @@
+Duke IGNITE is a 2-day hackathon focused on learning and inclusivity. Teams are matched with an experienced student mentor to help teams scope, architect, and debug projects from start to finish.
+
+As an IGNITE mentor, I was excited to host a Blender 3D modelling workshop this past weekend! I taught a group of fellow Duke students the capabilities of Blender, my favorite piece of open-source 3D software, as it pertains to creating low-poly models for game development and animation. We went over the fundamentals of geometry-based modelling, topology, sculpting, and material assignment. 
+
+Blender users can download the class's <a target="_blank" href="https://drive.google.com/file/d/1RsTBv4-lSXCqYS7n8RCB3lEKFfjezM8A/view?usp=sharing">end-result .blend file</a>, or watch the <a target="_blank" href="https://youtu.be/1q-bUxFQzHY">full workshop recording</a>.

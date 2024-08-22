@@ -56,7 +56,7 @@
       slew of personal projects, too! Feel free to browse highlights of what I’ve been up to recently.</p>
     <div class="row justify-content-md-center mb-5">
       <div class="col col-lg-1" style="color: rgb(255, 138, 138)">
-        <a href="https://www.instagram.com/raymond__of__sunshine" style="all: unset;"><svg
+        <a target="_blank" href="https://www.instagram.com/raymond__of__sunshine" style="all: unset;"><svg
             xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-instagram"
             viewBox="0 0 16 16">
             <path
@@ -64,14 +64,15 @@
           </svg></a>
       </div>
       <div class="col col-lg-1" style="color: rgb(255, 138, 138)">
-        <a href="https://github.com/raylennon" style="all: unset;"><svg xmlns="http://www.w3.org/2000/svg" width="45"
-            height="45" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+        <a target="_blank" href="https://github.com/raylennon" style="all: unset;"><svg
+            xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-github"
+            viewBox="0 0 16 16">
             <path
               d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
           </svg></a>
       </div>
       <div class="col col-lg-1" style="color: rgb(255, 138, 138)">
-        <a href="https://www.linkedin.com/in/ray-lennon/?_l=en_US" style="all: unset;"><svg
+        <a target="_blank" href="https://www.linkedin.com/in/ray-lennon/?_l=en_US" style="all: unset;"><svg
             xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-linkedin"
             viewBox="0 0 16 16">
             <path
@@ -103,26 +104,26 @@
                 <div class="card-body text-truncate-container ">
                   <h2 class="card-title">
                     <%=post.id.slice(2)%>
-                      </h5>
-                      <h6 class="card-subtitle mb-2 mb-3 "><%- posts[i].datebox %></h6>
-                      <p class="card-text " style="max-height: 10rem;"><%-post.description%></p>
-                      <div class="align-items-center d-flex">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                          data-bs-target="#<%=i%>Modal">
-                          <b>Full Story</b>
-                        </button>
-                        <a href="#<%=post.id.slice(2)%>" class="card-link mx-2" style=" text-decoration: none; ">🔗</a>
-                        <span class="ms-auto">
-                          <% for(var j=0; j < post.categories.length; j++) { %>
-                            <%if (post.categories[j].length> 1) { %>
-                              <a href="/<%=post.categories[j]%>/">
-                                <span class="badge badge-pill bg-secondary">
-                                  <%=post.categories[j]%>
-                                </span>
-                              </a>
-                              <%}}%>
-                        </span>
-                      </div>
+                  </h2>
+                  <h6 class="card-subtitle mb-2 mb-3 "><%- posts[i].datebox %></h6>
+                  <p class="card-text " style="max-height: 10rem;"><%-post.description%></p>
+                  <div class="align-items-center d-flex">
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<%=i%>Modal">
+                        <b>Full Story</b>
+                      </button>
+                    <a href="#<%=post.id.slice(2)%>" class="card-link mx-2" style=" text-decoration: none; "
+                      id="toast<%=i%>">🔗</a>
+                    <span class="ms-auto">
+                      <% for(var j=0; j < post.categories.length; j++) { %>
+                        <%if (post.categories[j].length> 1) { %>
+                          <a href="/<%=post.categories[j]%>/">
+                            <span class="badge badge-pill bg-secondary">
+                              <%=post.categories[j]%>
+                            </span>
+                          </a>
+                          <%}}%>
+                    </span>
+                  </div>
                 </div>
       </div>
       <% } %>
@@ -135,11 +136,16 @@
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
                     <%=post.id.slice(2)%>
                   </h1>
+
+
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                  <h5 class="text-muted">
+                    <%=post.datebox%>
+                  </h5>
                   <%-post.description%>
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center mt-5">
                       <% for(var j=0; j < post.images.length; j++) { %>
                         <% var image=post.images[j]; %>
                           <img class="card-img-top" src="/posts/<%= post.id %>/<%= image %>" loading="lazy"
@@ -155,6 +161,20 @@
           </div>
           <% } %>
   </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="ToastNotif" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header  text-bg-white">
+        <strong class="me-auto">Link Created! 🔗</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"
+          data-bs-theme="dark"></button>
+      </div>
+      <div class="toast-body text-bg-white">
+        Card link generated - see URL bar.
+      </div>
+    </div>
+  </div>
+
   <div class="row text-center align-items-center">
     <div class="col-xl py-4 mx-auto" onclick="window.scrollTo(0, 0);" onmouseover="" style="cursor: pointer;">
       <h1>Back to Top 🚀</h1>
