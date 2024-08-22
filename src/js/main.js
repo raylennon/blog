@@ -6,8 +6,6 @@ import 'bootstrap/js/dist/modal';
 
 import {  Toast } from 'bootstrap';
 
-// import 'bootstrap/js/dist/navbar';
-
 const toastTriggers = document.querySelectorAll('[id^="toast"]');
 const toastLiveExample = document.getElementById('ToastNotif');
 
